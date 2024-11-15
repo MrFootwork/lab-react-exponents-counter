@@ -1,12 +1,12 @@
-const ExponentFive = ({ count }) => {
-	const exponent = 5;
-	const base = count;
+const Exponent = ({ base, exponent }) => {
 	const operation = `${Array(exponent).fill(base).join(' * ')}`;
-	const result = count ** exponent;
+	const result = base ** exponent;
 
 	return (
 		<div className='exponent-counter-container'>
-			<p className='exponent-label'>n⁵</p>
+			<p className='exponent-label'>
+				n<sup>{exponent}</sup>
+			</p>
 			<p className='exponent-result'>
 				{operation} = <span className='total'>{result}</span>
 			</p>
@@ -14,4 +14,4 @@ const ExponentFive = ({ count }) => {
 	);
 };
 
-export default ExponentFive;
+export default Exponent;
